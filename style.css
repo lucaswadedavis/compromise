@@ -1,0 +1,135 @@
+body
+{
+ font-size:3em;
+ font-family:arial;
+ padding:40px;
+ background-color:#FFFEDB;
+ color:#333;
+}
+
+div
+{
+margin:5px;
+}
+
+h1,h2, h3, p
+{
+ text-align:center;   
+}
+
+h3
+{
+margin-bottom:20px;
+margin-top:30px;
+}
+
+p
+{
+font-size:0.5em;
+}
+
+input
+{
+font-size:2em;
+width:100%;
+}
+
+table
+{
+ width:100%;  
+ table-layout:fixed;
+}
+
+td
+{
+ vertical-align:top;
+ border:0px solid black;   
+ padding:10px;
+ margin:0px;
+}
+
+ul
+{
+ padding:10px;
+ border:1px solid black;
+ background-color:#ffa;
+}
+
+li
+{
+border:1px solid #000;
+background-color:#fff;
+background: -moz-linear-gradient(to top,#fff,rgba(0,0,0,0));
+background: -webkit-linear-gradient(bottom,#fff,rgba(255,255,255,0));
+background: -ms-linear-gradient(bottom,#fff,rgba(0,0,0,0));
+background: -o-linear-gradient(bottom,#fff,rgba(0,0,0,0));
+font-size:2em;
+-moz-border-radius: 15px;
+border-radius: 15px;
+padding:8px;
+margin:8px;
+list-style:none;
+}
+
+#sortable0 li, #sortable1 li
+{
+cursor:pointer;
+}
+
+.button
+{
+ border:1px solid black;
+ background-color:#ffa;
+background: -moz-linear-gradient(to top,#ffa,#fff);
+background: -webkit-linear-gradient(bottom,#ffa,#fff);
+background: -ms-linear-gradient(bottom,#ffa,#fff);
+background: -o-linear-gradient(bottom,#ffa,#fff);
+color:#555;
+ -moz-border-radius: 15px;
+ border-radius: 15px;
+ cursor: pointer;
+ padding:10px;
+ text-align:center;
+}
+
+.remove
+{
+  background-color: orange; /* fallback color if gradients are not supported */
+background: -moz-linear-gradient(to top,orange,#ffa);
+background: -webkit-linear-gradient(bottom,orange,#ffa);
+background: -ms-linear-gradient(bottom,orange,#ffa);
+background: -o-linear-gradient(bottom,orange,#ffa);
+color:#fff;
+}
+
+.small
+{
+font-size:1em;
+}
+
+#compromise li
+{
+text-align:center;
+opacity:1;
+}
+
+#submitNewName
+{
+  background-color: #afa; /* fallback color if gradients are not supported */
+background: -moz-linear-gradient(to top,#afa,#fff);
+background: -webkit-linear-gradient(bottom,#cfa,#fff);
+background: -ms-linear-gradient(bottom,#afa,#fff);
+background: -o-linear-gradient(bottom,#afa,#fff);
+
+}
+
+#sortable1
+{
+background-color:#0ff;
+}
+
+#sortable0
+{
+text-align:right;
+background-color:#faa;
+}
