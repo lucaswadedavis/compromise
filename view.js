@@ -151,7 +151,7 @@ var view={
 				d+="</ul>";
 		d+="</td>";
 		d+="<td id='rightSortable'>";
-			d+="<h3>Pappa Sorts This List.</h3>";
+			d+="<h3>Pappa Sorts This List</h3>";
 			d+="<ul id='sortable1'>";
 			if (model.names.length==0){d+="<li class='small'>Daddy will sort this!</li>";}
 			   model.names=model.names.sort(function(a,b){return a.scores[1]-b.scores[1]});
