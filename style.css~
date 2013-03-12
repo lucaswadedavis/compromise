@@ -82,10 +82,10 @@ list-style:none;
 
 #title
 {
-padding:10px;
+padding-top:10px;
 text-align:center;
-color:#333;
-font-size:0.5em;
+background-color:#333;
+color:#ffa;
 margin-bottom:0px;
 }
 
@@ -94,26 +94,23 @@ margin-bottom:0px;
 cursor:pointer;
 }
 
-#rightSortable, #centerCompromise, #leftSortable
-{
-border-top:10px solid #333;
-border-bottom:10px solid #333;
-}
-
 #rightSortable
 {
 background-color:#0ff;
+border-bottom:10px solid #333;
 }
 
 #centerCompromise
 {
  background-color:#ffa;
+border-bottom:10px solid #333;
 }
 
 #leftSortable
 {
 text-align:right;
 background-color:#faa;
+border-bottom:10px solid #333;
 }
 
 .button
