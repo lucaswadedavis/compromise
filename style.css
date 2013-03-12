@@ -2,14 +2,21 @@ body
 {
  font-size:3em;
  font-family:arial;
- padding:40px;
+ padding:0px;
+ margin:0px;
+ width:100%;
  background-color:#FFFEDB;
  color:#333;
 }
 
 div
 {
-margin:5px;
+margin:0px;
+}
+
+div #wrapper
+{
+margin:0px;
 }
 
 h1,h2, h3, p
@@ -17,10 +24,10 @@ h1,h2, h3, p
  text-align:center;   
 }
 
-h3
+h2, h3
 {
-margin-bottom:20px;
-margin-top:30px;
+margin-bottom:0px;
+margin-top:20px;
 }
 
 p
@@ -38,7 +45,11 @@ table
 {
  width:100%;  
  table-layout:fixed;
+ margin:0px;
+  border-spacing:0;
+  border-collapse:collapse;
 }
+
 
 td
 {
@@ -51,8 +62,6 @@ td
 ul
 {
  padding:10px;
- border:1px solid black;
- background-color:#ffa;
 }
 
 li
@@ -71,9 +80,37 @@ margin:8px;
 list-style:none;
 }
 
+#title
+{
+padding:10px;
+text-align:center;
+background-color:#333;
+color:#ffa;
+margin-bottom:0px;
+}
+
 #sortable0 li, #sortable1 li
 {
 cursor:pointer;
+}
+
+#rightSortable
+{
+background-color:#0ff;
+border-bottom:10px solid #333;
+}
+
+#centerCompromise
+{
+ background-color:#ffa;
+border-bottom:10px solid #333;
+}
+
+#leftSortable
+{
+text-align:right;
+background-color:#faa;
+border-bottom:10px solid #333;
 }
 
 .button
@@ -89,6 +126,7 @@ color:#555;
  border-radius: 15px;
  cursor: pointer;
  padding:10px;
+ margin:5px;
  text-align:center;
 }
 
@@ -99,7 +137,7 @@ background: -moz-linear-gradient(to top,orange,#ffa);
 background: -webkit-linear-gradient(bottom,orange,#ffa);
 background: -ms-linear-gradient(bottom,orange,#ffa);
 background: -o-linear-gradient(bottom,orange,#ffa);
-color:#fff;
+color:#000;
 }
 
 .small
@@ -120,16 +158,5 @@ background: -moz-linear-gradient(to top,#afa,#fff);
 background: -webkit-linear-gradient(bottom,#cfa,#fff);
 background: -ms-linear-gradient(bottom,#afa,#fff);
 background: -o-linear-gradient(bottom,#afa,#fff);
-
 }
 
-#sortable1
-{
-background-color:#0ff;
-}
-
-#sortable0
-{
-text-align:right;
-background-color:#faa;
-}

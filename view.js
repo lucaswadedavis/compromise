@@ -1,8 +1,7 @@
 $(document).ready(function(){
-	
 	controller.load();
 	view.listeners();
-	//initFastButtons();
+
 	if (model.names.length>1){
 		view.sort();
 		}
@@ -15,6 +14,30 @@ var view={
 
 	listeners:function(){
 		
+	window.addEventListener('load', function() {
+		Array.prototype.forEach.call(document.getElementsByClassName('button'), function(testEl) {
+			var teTime;
+
+			testEl.addEventListener('touchend', function(event) {
+				teTime = Date.now();
+			}, false);
+		
+			testEl.addEventListener('click', function(event) {
+				var cTime = Date.now();
+		
+				document.getElementById('te-time').value = teTime;
+				document.getElementById('c-time').value = cTime;
+				document.getElementById('d-time').value = cTime - teTime;
+			}, false);
+
+			testEl.addEventListener('click', function() {
+				testEl.style.backgroundColor = testEl.style.backgroundColor ? '' : 'YellowGreen';
+			}, false)
+		});
+
+		new FastClick(document.getElementById('fastclick'));
+	}, false);
+
 		$("#submitNewName").live("click",function(){
 			
 			var input=$("input").val();
@@ -62,6 +85,7 @@ var view={
 			d+="<div id='"+model.projects[i].id+"' class='button remove'>delete "+model.projects[i].name+"?</div>";
 			}
 		$("div#wrapper").html(d);
+
 	},
 	
 	removeName:function(){
@@ -72,6 +96,12 @@ var view={
 		}
 	d+="<div id='goToSort' class='button'>back to the list!</div>";
 	$("div#wrapper").html(d);
+
+	new FastClick(document.getElementById('goToSort'));
+
+	for (var i=0;i<model.names.length;i++){
+		new FastClick(document.getElementById(model.names[i].id));
+		}
 	},
 	
 	addNewName:function(){
@@ -81,6 +111,10 @@ var view={
 		d+="<div id='submitNewName' class='button'>add this to the list!</div>";
 		d+="<div id='goToSort' class='button'>back to the list!</div>";
 		$("div#wrapper").html(d);
+
+	new FastClick(document.getElementById('submitNewName'));
+	new FastClick(document.getElementById('goToSort'));
+
 	},
 
 
@@ -88,7 +122,6 @@ var view={
 	sort:function(){
 		var d="";
 		d+="<table>";
-		d+="<tr><td colspan='3'><h2 id='addNewName' class='button'>Add Another Name!</h2></td></tr>";
 		d+="<tr>";
 		d+="<td id='leftSortable'>";
 			d+="<h3>Momma Sorts This List</h2>";
@@ -128,9 +161,8 @@ var view={
 				d+="</ul>";
 		d+="</td>";
 		d+="</tr>";
-		d+="<tr><td colspan='3'>";
-			d+="<h3 id='removeName' class='button'>REMOVE SOMETHING LESS GREAT</h3>";
-			//d+="<h3 class='button'>settings</h3>";
+		d+="<tr><td colspan='3'><h2 id='addNewName' class='button fast'>Add Another Name!</h2>";
+			d+="<h3 id='removeName' class='button'>Drop Some Names You Like Less</h3>";
 		d+="</td></tr>";
 		d+="</table>";
 		$("div#wrapper").html(d);
@@ -155,6 +187,12 @@ var view={
 					});
                 }});
 		
+
+
+	
+	new FastClick(document.getElementById('addNewName'));
+	new FastClick(document.getElementById('removeName'));
+
         $("#sortable1").sortable({axis:"y",update:function(event,ui){
                var  temp=$(this).sortable("toArray");
 			   //console.log(temp);
